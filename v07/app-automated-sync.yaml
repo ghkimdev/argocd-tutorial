@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-sync-phases-1
+  name: app-sync-phases-2
   namespace: argocd
 spec:
   destination:
-    namespace: app-sync-phase-1
+    namespace: app-sync-phase-2
     server: https://kubernetes.default.svc
   project: default
   source:
