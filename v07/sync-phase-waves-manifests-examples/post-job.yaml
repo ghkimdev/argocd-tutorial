@@ -9,7 +9,7 @@ spec:
     spec:
       containers:
         - name: mattermost-success
-          image: mattermost:final
+          image: python:3.11-slim
           command: [ "python3", "mattermost_api.py"]
           env:
           - name: message

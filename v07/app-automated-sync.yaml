@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: v03-argocd-applications/helm/nginx
+    path: v07/sync-phase-waves-manifests-examples
     repoURL: https://github.com/ghkimdev/argocd-tutorial.git
     targetRevision: main
   syncPolicy:
