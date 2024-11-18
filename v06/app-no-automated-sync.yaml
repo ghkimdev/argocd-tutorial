@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: no-automated-sync
+  namespace: argocd
+spec:
+  destination:
+    namespace: no-automated-sync
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: v03-argocd-applications/helm/nginx
+    repoURL: https://github.com/ghkimdev/argocd-tutorial.git
+    targetRevision: main
+

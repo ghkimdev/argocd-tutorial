@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: application-directory
+  namespace: argocd
+spec:
+  destination: 
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    directory:
+            #      exclude: 'serviceaccount.yaml'
+            #      include: '{serviceaccount.yaml,service.yaml}'
+      recurse: true
+    path: v03-argocd-applications/directoryOfmanifests
+    repoURL: https://github.com/ghkimdev/argocd-tutorial.git
+    targetRevision: main
+
+
